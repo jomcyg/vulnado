@@ -1,0 +1,17 @@
+name: dev CI
+
+on:
+   push:
+    branches: [ "main" ]
+    paths-Ignore:
+      -'**/*.md'
+      - '**/*.txt'
+   workflow_dispatch:   
+
+jobs:
+  build:
+    name: dev-build
+    uses: ./github/workflows/java-build.yaml
+    #secrets: inherit #https://docs.github.com
+    
+  
