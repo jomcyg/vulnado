@@ -21,6 +21,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
         #Compile
-      - name: Build with Maven
-        run: mvn clean package -B -Dmaven.test.skip
-      - run: mkdir candidate-binary && cp target/*.jar candidate-binary
+    - name: Build with Maven
+      run: mvn clean package -B -Dmaven.test.skip
+    - run: mkdir candidate-binary && cp target/*.jar candidate-binary

@@ -1,12 +1,12 @@
 name: dev CI
 
 on:
-   push:
+  push:
     branches: [ "main" ]
-    paths-Ignore:
+    paths-ignore:
       -'**/*.md'
       - '**/*.txt'
-   workflow_dispatch:   
+  workflow_dispatch:   
 
 jobs:
   build:
