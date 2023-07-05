@@ -7,11 +7,11 @@ jobs:
   build:
     #runner configs
     runs-on: ubuntu-latest
-    # permissions:
-    #   contents: read
-    #   issues: read
-    #   checks: write
-    #   pull-requests: write
+    permissions:
+      contents: read
+      issues: read
+      checks: write
+      pull-requests: write
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -24,3 +24,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean package -B -Dmaven.test.skip
     - run: mkdir candidate-binary && cp target/*.jar candidate-binary
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package
+        path: candidate-binary
