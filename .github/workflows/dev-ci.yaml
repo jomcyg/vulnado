@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # Necessary to access local action
       - name: dev-build
+        uses: actions/checkout@v3
         uses: ./.github/workflows/java-build.yaml
         #secrets: inherit #https://docs.github.com
     
