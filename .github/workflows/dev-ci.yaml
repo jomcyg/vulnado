@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # Necessary to access local action
       - name: dev-build
-        working-directory: ./
+        working-directory: ./vulnado
         uses: ./.github/workflows/java-build.yaml
+        run: npm install
         #secrets: inherit #https://docs.github.com
     
   
