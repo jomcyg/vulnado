@@ -9,8 +9,6 @@ on:
 
 jobs:
   buildjob:
-    runs-on: ubuntu-latest
-    name: dev-build
     uses: ./.github/workflows/java-build.yaml
     #secrets: inherit #https://docs.github.com
     
