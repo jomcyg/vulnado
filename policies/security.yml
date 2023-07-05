@@ -1,0 +1,22 @@
+
+## Security Levels
+# - critical
+# - high
+# - error
+# - medium
+# - moderate
+# - low
+# - warning
+# - notes
+
+# general:
+#   level: error
+
+codescanning:
+  level: high
+ 
+dependabot:
+  level: critical
+
+secretscanning:
+  level: all
